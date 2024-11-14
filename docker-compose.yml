@@ -28,22 +28,4 @@ services:
       SPRING_DATASOURCE_PASSWORD: Admin$2024
     networks:
       - redProyecto
-      
-  frontend:
-    build:
-      context: ./frontendProject/frontalm14
-      dockerfile: Dockerfile
-    container_name: contenedor-Frontend
-    ports:
-      - "5545:80"
-    depends_on:
-      - springboot-app
-    networks:
-      - redProyecto
 
-volumes:
-  mysql-data:
-
-networks:
-  redProyecto:
-    driver: bridge
